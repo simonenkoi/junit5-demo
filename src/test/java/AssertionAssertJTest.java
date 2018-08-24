@@ -223,10 +223,10 @@ class AssertionAssertJTest {
         String firstName = "FIRST_NAME";
         String lastName = "LAST_NAME";
         Person person = new Person(firstName, lastName);
-        SoftAssertions softAssertions = new SoftAssertions();
-        softAssertions.assertThat(person.getFirstName()).isEqualTo(firstName);
-        softAssertions.assertThat(person.getLastName()).isEqualTo(lastName);
-        softAssertions.assertAll();
+        SoftAssertions.assertSoftly(softly -> {
+            softly.assertThat(person.getFirstName()).isEqualTo(firstName);
+            softly.assertThat(person.getLastName()).isEqualTo(lastName);
+        });
     }
 
     private final class Person {
