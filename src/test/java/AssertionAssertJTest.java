@@ -228,23 +228,4 @@ class AssertionAssertJTest {
             softly.assertThat(person.getLastName()).isEqualTo(lastName);
         });
     }
-
-    private final class Person {
-
-        private final String firstName;
-        private final String lastName;
-
-        Person(String firstName, String lastName) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-        }
-
-        String getFirstName() {
-            return firstName;
-        }
-
-        String getLastName() {
-            return lastName;
-        }
-    }
 }
