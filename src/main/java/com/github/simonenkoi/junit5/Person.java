@@ -1,3 +1,5 @@
+package com.github.simonenkoi.junit5;
+
 public final class Person {
 
     private final String firstName;
